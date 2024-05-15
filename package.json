@@ -1,8 +1,21 @@
 {
+  "name": "cm-product-card",
   "version": "0.0.1",
-  "license": "MIT",
+  "author": "Carl Mateus",
   "main": "dist/index.js",
+  "module": "dist/cm-product-card.esm.js",
   "typings": "dist/index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/CarlFMateus/cm-product-card",
+    "type": "git"
+  },
+  "keywords": [
+    "product",
+    "card",
+    "carl",
+    "mateus"
+  ],
   "files": [
     "dist",
     "src"
@@ -14,6 +27,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
+    "test:watch": "tsdx test --watch",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
@@ -33,9 +47,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "cm-product-card",
-  "author": "Carl Mateus",
-  "module": "dist/cm-product-card.esm.js",
   "size-limit": [
     {
       "path": "dist/cm-product-card.cjs.production.min.js",
@@ -47,18 +58,34 @@
     }
   ],
   "devDependencies": {
+    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-react": "^7.24.1",
     "@rollup/plugin-image": "^3.0.3",
     "@size-limit/preset-small-lib": "^11.1.2",
-    "@types/react": "^18.2.73",
-    "@types/react-dom": "^18.2.23",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-test-renderer": "^18.3.0",
+    "babel-jest": "^29.7.0",
     "husky": "^9.0.11",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
     "postcss": "^8.4.38",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-test-renderer": "^18.3.1",
     "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^11.1.2",
     "tsdx": "^0.14.1",
     "tslib": "^2.6.2",
     "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   }
 }
