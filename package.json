@@ -1,6 +1,6 @@
 {
   "name": "cm-product-card",
-  "version": "0.0.1",
+  "version": "1.0.0-rc",
   "author": "Carl Mateus",
   "main": "dist/index.js",
   "module": "dist/cm-product-card.esm.js",

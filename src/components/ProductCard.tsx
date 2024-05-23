@@ -40,8 +40,7 @@ export const ProductCard = ({
   });
 
   const maxCount = initialValues?.maxCount;
-  const properties = {
-    counter,
+  const properties = { counter,
     increaseBy,
     product,
     maxCount,
